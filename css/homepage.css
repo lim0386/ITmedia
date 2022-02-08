@@ -1,0 +1,480 @@
+html{
+	min-height: 100%;
+	margin: 0px;
+	padding: 0px;
+	outline: 0px;
+}
+
+body {
+	min-height: 100%;
+	margin: 0px;
+	padding: 0px;
+	outline: 0px;
+	color: #888;
+	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-image: url(../img/background.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h2, h3, h4 {
+  color: #34467c;
+}
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+}
+h3 {
+  font-size: 21px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+strong {
+  font-weight: 400;
+}
+cite,
+em {
+  font-style: italic;
+}
+
+.wrap {
+	min-height: 100%;
+}
+
+.header {
+	display: block;
+	margin: 0px;
+	height: 70px;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-header {
+	display: inline-block;
+	background: center center no-repeat url('http://macmannis.com/new/img/logo.png');
+	font-size: 0px;
+	width: 300px;
+	height: 70px;
+	margin: 0px;
+}
+
+.header-nav {
+	display: inline-block;
+	font-size: 0px;
+	width: 895px;
+	height: 70px;
+	margin: 0px;
+}
+
+.header-nav-ul {
+	display: inline-block;
+	width: 640px;
+	font-size: 0px;
+	list-style-type: none;
+	float: right;
+	height: 40px;
+}
+
+.header-nav-ul li {
+	float: left;
+	font: 15px bold Arial;
+	height: 40px;
+	outline: 1px solid rgba(0, 0, 0, 0.05);
+	margin: 15px 2px;
+	-webkit-transition: outline 500ms, background-color 500ms;
+	-moz-transition: outline 500ms, background-color 500ms;
+	-o-transition: outline 500ms, background-color 500ms;
+	transition: outline 500ms, background-color 500ms;
+}
+
+.header-nav-ul li:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+	outline: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.header-nav-ul li a {
+	padding: 8px 50px;
+	line-height: 40px;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.5);
+	-webkit-transition: color 500ms;
+	-moz-transition: color 500ms;
+	-o-transition: color 500ms;
+	transition: color 500ms;
+}
+
+.header-nav-ul li a:hover {
+	color: rgba(0, 0, 0, 1);
+}
+
+.container {
+	position: relative;
+	margin: 0px auto;
+	width: 1200px;
+	text-align: center;
+}
+
+.container-small {
+	position: relative;
+	margin: 0px auto;
+	width: 1000px;
+}
+
+.gallery {
+
+	display: inline-block;
+	width: 1000px;
+	height: 700px;
+	margin-top: 15px;
+	font-size: 0px;
+	text-align: center;
+}
+
+.main-image, .main-image-full {
+	display: inline-block;
+	position: relative;
+	z-index: 999;
+}
+
+.main-image {
+  margin-top: 150px;
+	width: 450px;
+	height: 450px;
+	font-size: 0px;
+	border: 1px solid #898989;
+	border-radius: 400px;
+	-webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.75);
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.75);
+	background-image: url(../img/main.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	-webkit-transition: width 2s, height 2s, background-position 2s, border-radius 2s, box-shadow 2s;
+	-moz-transition: width 2s, height 2s, background-position 2s, border-radius 2s, box-shadow 2s;
+	-o-transition: width 2s, height 2s, background-position 2s, border-radius 2s, box-shadow 2s;
+	transition: width 2s, height 2s, background-position 2s, border-radius 2s, box-shadow 2s;
+	cursor: -moz-zoom-in;
+	cursor: zoom-in;
+}
+
+.popup-text-title {
+	display: inline-block;
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	left: -1px;
+	top: -50px;
+	height: 50px;
+	width: 0px;
+	background-color: #000000;
+	border: 1px solid #898989;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: rgba(255, 255, 255, 0.0);
+	font: 24px/50px bold Arial;
+	text-align: left;
+	text-indent: 20px;
+	-webkit-transition: width 2s, opacity 2s, visibility 2s, color 1s linear 2s;
+	-moz-transition: width 2s, opacity 2s, visibility 2s, color 1s linear 2s;
+	-o-transition: width 2s, opacity 2s, visibility 2s, color 1s linear 2s;
+	transition: width 2s, opacity 2s, visibility 2s, color 1s linear 2s;
+}
+
+.main-image-full > .popup-text-title {
+	opacity: 1;
+	visibility: visible;
+	width: 1024px;
+	cursor: default;
+	color: rgba(255, 255, 255, 1);
+}
+
+.main-image-full {
+	width: 1024px;
+	height: 1024px;
+	background-position: 0px 0px;
+	-webkit-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+	border-radius: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	cursor: -moz-zoom-out;
+	cursor: zoom-out;
+}
+
+.small-image {
+	display: inline-block;
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	font-size: 0px;
+	border: 1px solid #898989;
+	border-radius: 65px;
+	/*-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	background: #BCBCBC top center no-repeat url('http://macmannis.com/new/img/macmannimage.jpg');*/
+	cursor: pointer;
+}
+
+/*first-main*/
+
+#s-img-1 {
+	top: 25px;
+	left: 455px;
+	background-image: url(../img/1.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-2 {
+	top: 60px;
+	left: 325px;
+	background-image: url(../img/2.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-3 {
+	top: 130px;
+	left: 225px;
+	background-image: url(../img/3.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-4 {
+	top: 235px;
+	left: 160px;
+	background-image: url(../img/4.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-5 {
+	top: 355px;
+	left: 145px;
+	background-image: url(../img/5.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-6 {
+	top: 470px;
+	left: 175px;
+	background-image: url(../img/6.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-7 {
+	top: 565px;
+	left: 250px;
+	background-image: url(../img/7.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-8 {
+	top: 625px;
+	left: 350px;
+	background-image: url(../img/8.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-9 {
+	top: 525px;
+	left: 85px;
+	background-image: url(../img/9.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-10 {
+	top: 275px;
+	left: 50px;
+	background-image: url(../img/10.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-11 {
+	top: 65px;
+	left: 150px;
+	background-image: url(../img/11.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+/*second-main*/
+
+#s-img-12 {
+	top: 60px;
+	right: 325px;
+	background-image: url(../img/12.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-13 {
+	top: 130px;
+	right: 225px;
+	background-image: url(../img/13.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-14 {
+	top: 235px;
+	right: 160px;
+	background-image: url(../img/14.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-15 {
+	top: 355px;
+	right: 145px;
+	background-image: url(../img/15.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-16 {
+	top: 470px;
+	right: 175px;
+	background-image: url(../img/16.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-17 {
+	top: 565px;
+	right: 250px;
+	background-image: url(../img/17.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-18 {
+	top: 625px;
+	right: 350px;
+	background-image: url(../img/18.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-19 {
+	top: 525px;
+	right: 85px;
+	background-image: url(../img/19.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-20 {
+	top: 275px;
+	right: 50px;
+	background-image: url(../img/20.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-21 {
+	top: 65px;
+	right: 150px;
+	background-image: url(../img/21.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#s-img-1:hover, #s-img-2:hover, #s-img-3:hover, #s-img-4:hover, #s-img-5:hover, #s-img-6:hover, #s-img-7:hover, #s-img-8:hover, #s-img-9:hover, #s-img-10:hover, #s-img-11:hover {
+	-webkit-box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#s-img-12:hover, #s-img-13:hover, #s-img-14:hover, #s-img-15:hover, #s-img-16:hover, #s-img-17:hover, #s-img-18:hover, #s-img-19:hover, #s-img-20:hover, #s-img-21:hover {
+	-webkit-box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#me, #php, #blog {
+	background: -15px -15px 330px 230px no-repeat;
+	-webkit-transition: background-position 500ms, background-size 500ms;
+	-moz-transition: background-position 500ms, background-size 500ms;
+	-o-transition: background-position 500ms, background-size 500ms;
+	transition: background-position 500ms, background-size 500ms;
+}
+
+#me {
+	background-image: url('http://macmannis.com/new/img/me.jpg');
+}
+
+#php {
+	background-image: url('http://macmannis.com/new/img/php.jpg');
+}
+
+#blog {
+	background-image: url('http://macmannis.com/new/img/blog.jpg');
+}
+
+#me:hover, #php:hover, #blog:hover {
+	background: 1px 0px 300px 200px;
+}
+
+
+.blackout {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	background: rgba(0, 0, 0, 0.6);
+	-webkit-transition: opacity 2s, visibility 2s;
+	-moz-transition: opacity 2s, visibility 2s;
+	-o-transition: opacity 2s, visibility 2s;
+	transition: opacity 2s, visibility 2s;
+}
+
+.blackout-on {
+	opacity: 1;
+	visibility: visible;
+}
